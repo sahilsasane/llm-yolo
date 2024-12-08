@@ -79,7 +79,7 @@ The project addresses the need for an intuitive and intelligent system to analyz
 ## Screenshots  
 ![LLM Sports Agent Home](images/home.png)
 ![Results](images/results.png)
-![Results2](images/results2.png)
+![Results2](images/results.2.png)
 
 ---
 
