@@ -32,7 +32,7 @@ The project addresses the need for an intuitive and intelligent system to analyz
 - **FastAPI**: Robust backend framework for managing WebSocket connections and LLM integration.  
 - **Python**: Core language for data manipulation and LLM operations.  
 - **Pandas**: Data analysis and processing.  
-- **OpenAI**: LLM integration for intelligent query handling.  
+- **Gemini**: LLM integration for intelligent query handling.  
 
 ---
 
