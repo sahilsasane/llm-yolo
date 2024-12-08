@@ -94,11 +94,23 @@ pothole-detection-system/
 
 ---
 
-## License
-This project is licensed under the MIT License.
-
----
-
 ## Screenshots
 ![Pothole Detection UI](images/home.png)
 ![Pothole Detection Results](images/results.png)
+
+---
+
+## Demo
+
+[Watch Demo Video](https://drive.google.com/file/d/1OhaZSN7PTgNo_wnMeu373JkbjHXT9Qys/view?usp=sharing)
+
+---
+
+## Sample Video and CSV Report
+
+### Video
+1.[Watch Input Video](https://drive.google.com/file/d/1XgNtNimXtFi1SVXAAYFughQddtDa3WE2/view?usp=sharing)
+2.[Watch Annotated Video](https://drive.google.com/file/d/1Vx5WEWFeIaqutry4fplkpUfNYnZe1m0f/view?usp=sharing)
+
+### CSV Report
+[Download CSV Report](https://drive.google.com/file/d/1VgsNbXFNQz3GZ8tzLulLB0UH104QFU0t/view)
