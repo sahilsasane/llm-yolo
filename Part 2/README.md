@@ -18,7 +18,7 @@ A robust **Pothole Detection System** leveraging modern technologies to analyze 
 
 ### Backend
 - **Python**
-- **Flask or FastAPI** (depending on your actual implementation)
+- **FastAPI** (with Uvicorn): For creating the backend server.
 - **OpenCV**: For video frame processing.
 - **Google Drive API**: For file uploads and sharing.
 
