@@ -47,7 +47,17 @@ The project addresses the need for an intuitive and intelligent system to analyz
    ```bash
    pip install -r requirements.txt
    ```  
-3. Run the FastAPI server:  
+3. Configure the Google API Key:  
+   - Provide the `GOOGLE_API_KEY` in the `.env` file located in the `app` directory.  
+   - Use the `.envSample` file as a reference:  
+     ```bash
+     cp .envSample .env
+     ```
+     Edit the `.env` file to include your Google API key:  
+     ```env
+     GOOGLE_API_KEY=your-google-api-key
+     ```
+4. Run the FastAPI server:  
    ```bash
    python main.py
    ```  
@@ -77,9 +87,9 @@ The project addresses the need for an intuitive and intelligent system to analyz
 ---
 
 ## Screenshots  
-![LLM Sports Agent Home](images/home.png)
-![Results](images/results.png)
-![Results2](images/results.2.png)
+![LLM Sports Agent Home](images/home.png)  
+![Results](images/results.png)  
+![Results2](images/results.2.png)  
 
 ---
 
@@ -90,6 +100,5 @@ The project addresses the need for an intuitive and intelligent system to analyz
 
 ---
 
-## Demo Video
-
-[Watch Demo Video](https://drive.google.com/file/d/1RIJTy7TB9raU03r7z4zZ9Zfr2TOG9-SM/view?usp=sharing)
+## Demo Video  
+[Watch Demo Video](https://drive.google.com/file/d/1RIJTy7TB9raU03r7z4zZ9Zfr2TOG9-SM/view?usp=sharing)  
