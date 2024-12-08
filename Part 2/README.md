@@ -1,7 +1,3 @@
-Here’s the updated **Pothole Detection System** documentation with instructions for downloading and setting up the model:
-
----
-
 # Pothole Detection System
 
 A robust **Pothole Detection System** leveraging modern technologies to analyze and process video footage to identify potholes and generate insights. This system is designed for municipalities and organizations aiming to improve road safety and maintenance efficiency.
