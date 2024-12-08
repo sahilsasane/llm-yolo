@@ -75,8 +75,10 @@ const Home = () => {
             });
             if (!res.ok) throw new Error("Failed to process video");
             const data = await res.json();
-            const processedUrl = data.uploaded_file[1].sharing_link;
-            const csvUrl = data.uploaded_file[0].sharing_link;
+            // console.log(data);
+            const processedUrl = data.uploaded_files[1].sharing_link;
+            const csvUrl = data.uploaded_files[0].sharing_link;
+            // console.log(processedUrl);
             setCsvUrl(csvUrl);
             setInformation(data.response);
             setProcessedVideoUrl(processedUrl);
@@ -160,7 +162,6 @@ const Home = () => {
                         </CardContent>
                     </Card>
 
-                    {/* Settings Section */}
                     <Card>
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
@@ -199,7 +200,6 @@ const Home = () => {
                         </CardContent>
                     </Card>
 
-                    {/* Results Section */}
                     {processedVideoUrl && (
                         <Card>
                             <CardHeader>
@@ -241,7 +241,7 @@ const Home = () => {
                                                         {information.total_potholes}
                                                     </span>
                                                 </div>
-                                                <div className="flex justify-between items-center">
+                                                <div className="flex items-center">
                                                     <span className="font-bold text-lg">Critical Zones:   </span>
                                                     <span className="text-lg font-bold text-red-600">
                                                         {information.critical_zones.length > 0

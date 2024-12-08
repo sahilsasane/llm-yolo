@@ -8,7 +8,7 @@ class Settings:
     UPLOAD_DIR = "files"
     OUTPUT_DIR = "outputs"
     MODEL_DIR = "models"
-    CREDENTIALS_DIR = "utils"
+    CREDENTIALS_DIR = "services"
 
 
 settings = Settings()

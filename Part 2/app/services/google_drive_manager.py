@@ -5,8 +5,8 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload, MediaIoBaseDownload
 import pickle
 import os
-import shutil
 import io
+from typing import Optional, Dict, List, Union
 from config.settings import Settings
 
 settings = Settings()
@@ -207,12 +207,43 @@ class GoogleDriveManager:
             print(f"Error generating download link: {str(e)}")
             return None
 
+    def delete_file(self, file_id: str) -> bool:
+        """
+        Delete a file from Google Drive.
 
-# manager = GoogleDriveManager()
-# manager.authenticate()
-# # manager.upload_video("p.mp4")
-# manager.download_video(
-#     file_id="1gdpImpFqJpLxSjf0Jn-9KlGKHxE5QqU9", save_path="downloaded_video.mp4"
-# )
-# l = manager.list_video_files()
-# print(l)
+        Args:
+            file_id: The ID of the file to delete
+
+        Returns:
+            bool: True if deletion was successful, False otherwise
+
+        Raises:
+            Exception: If deletion fails
+        """
+        try:
+            service = self.authenticate()
+            service.files().delete(fileId=file_id).execute()
+            return True
+        except Exception as e:
+            raise Exception(f"Error deleting file: {str(e)}")
+
+    def delete_multiple_files(self, file_ids: List[str]) -> Dict[str, List[str]]:
+        """
+        Delete multiple files from Google Drive.
+
+        Args:
+            file_ids: List of file IDs to delete
+
+        Returns:
+            Dict containing lists of successfully and failed deletions
+        """
+        results = {"succeeded": [], "failed": []}
+
+        for file_id in file_ids:
+            try:
+                if self.delete_file(file_id):
+                    results["succeeded"].append(file_id)
+            except Exception:
+                results["failed"].append(file_id)
+
+        return results
